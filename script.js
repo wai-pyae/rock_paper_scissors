@@ -1,3 +1,5 @@
+const resultDisplay =document.querySelector('.result');
+
 function computerPlay(){
     let rps_array = ['rock','paper','scissors'];
     let random_rps = Math.floor(Math.random()*3);
@@ -28,6 +30,5 @@ let computerSelection = computerPlay();
 let playerSelection = prompt("Choose one among Rock , Paper and Scissors");
 
 let result = playGround(playerSelection, computerSelection);
-console.log(computerSelection);
-console.log(playerSelection);
-console.log(result);
+
+resultDisplay.innerHtml.textContent = result;
